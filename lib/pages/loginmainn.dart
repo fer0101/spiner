@@ -40,6 +40,23 @@ class _LoginPageState extends State<LoginPagee> {
     );
   }
 
+  Widget _icon() {
+    return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: NetworkImage(
+                  "https://play-lh.googleusercontent.com/-uScmz-qtagHb074sElxtAhyiDNN6YO-hD9UTaqwGgOOM2G5nIyxsuB_uxNQ-N0-bTU=w240-h480-rw"),
+              fit: BoxFit.cover),
+          border: Border.all(color: Colors.white, width: 2),
+          shape: BoxShape.circle),
+      child: const Icon(
+        Icons.person,
+        color: Colors.transparent,
+        size: 130,
+      ),
+    );
+  }
+
   Widget _buildLoginForm(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -52,6 +69,7 @@ class _LoginPageState extends State<LoginPagee> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
+                    _icon(),
                     TextField(
                       controller: _usernameController,
                       decoration: const InputDecoration(

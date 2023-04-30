@@ -8,6 +8,7 @@ import 'package:spiner/pages/login_page.dart';
 import 'package:spiner/pages/loginmainn.dart';
 import 'cubit/CubitEtiquetas.dart';
 import 'cubit/cubit_estado_total.dart';
+import 'cubit/cubitaladir.dart';
 
 void main() => runApp(const AppState());
 
@@ -21,6 +22,7 @@ class AppState extends StatelessWidget {
       BlocProvider<ListaSpinerCubit>(create: (_) => ListaSpinerCubit()),
       BlocProvider<TareasCubit>(create: (_) => TareasCubit()),
       BlocProvider<logincubit>(create: (_) => logincubit()),
+      BlocProvider<MapCubit>(create: (_) => MapCubit()),
     ], child: const MyApp());
   }
 }
