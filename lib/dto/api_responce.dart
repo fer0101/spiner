@@ -1,35 +1,3 @@
-/*
-class ApiResponse {
-  String code;
-  Response response;
-  String errorMessage;
-
-  ApiResponse(
-      {required this.code, required this.response, required this.errorMessage});
-
-  factory ApiResponse.fromJson(Map<String, dynamic> json) {
-    return ApiResponse(
-      code: json['code'],
-      response: Response.fromJson(json['response']),
-      errorMessage: json['errorMessage'],
-    );
-  }
-}
-
-class Response {
-  String authToken;
-  String refreshToken;
-
-  Response({required this.authToken, required this.refreshToken});
-
-  factory Response.fromJson(Map<String, dynamic> json) {
-    return Response(
-      authToken: json['authToken'],
-      refreshToken: json['refreshToken'],
-    );
-  }
-}
-*/
 class LoginResponse {
   final bool success;
   final String message;
