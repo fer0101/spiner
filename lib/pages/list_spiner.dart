@@ -24,9 +24,19 @@ class listspiner extends StatelessWidget {
     }
     return Scaffold(
       appBar: AppBar(
-        title: const Text("hola"),
+        title: const Text(
+          "lista etiquetas",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20),
+        ),
       ),
-      body: Center(
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+          image: NetworkImage(
+              "https://img2.wallspic.com/previews/3/9/8/6/6/166893/166893-banner_de_anime-anime-manga-fan_art-kawaii-x750.jpg"),
+          fit: BoxFit.cover,
+        )),
         child: Column(
           children: [
             Expanded(
@@ -53,7 +63,10 @@ class listspiner extends StatelessWidget {
                 onPressed: () {
                   context.read<ListaSpinerCubit>().agregar();
                 },
-                child: const Text("nuevo")),
+                child: const Text(
+                  "nuevo",
+                  style: TextStyle(fontSize: 23, color: Colors.black),
+                )),
             TextButton(
                 onPressed: () {
                   for (var e in controladores) {
@@ -64,12 +77,18 @@ class listspiner extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Formularior()));
                 },
-                child: const Text("guardar")),
+                child: const Text(
+                  "guardar",
+                  style: TextStyle(fontSize: 23, color: Colors.black),
+                )),
             TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Text("cancelar")),
+                child: const Text(
+                  "cancelar",
+                  style: TextStyle(fontSize: 23, color: Colors.black),
+                )),
           ],
         ),
       ),

@@ -138,7 +138,7 @@ class guardarlista extends StatelessWidget {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => Formularior()));
         },
-        child: const Icon(Icons.abc_outlined),
+        child: const Icon(Icons.add_alarm_outlined),
       ),
     );
   }
