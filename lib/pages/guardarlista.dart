@@ -67,8 +67,7 @@ class guardarlista extends StatelessWidget {
                                     children: <Widget>[
                                       //
                                       Text("Clave: $clave"),
-                                      Text(
-                                          "Fecha de la etiqueta: ${valor.fecha}"),
+                                      Text("Fecha de la tarea: ${valor.fecha}"),
                                       Text("Etiqueta: ${valor.nuevatarea}"),
                                       //
                                     ],
@@ -98,7 +97,7 @@ class guardarlista extends StatelessWidget {
                                                 builder: (context) =>
                                                     const guardarlista()));
                                       },
-                                      child: const Text("editar")),
+                                      child: const Text("completar")),
                                 ],
                               )
                             ],
